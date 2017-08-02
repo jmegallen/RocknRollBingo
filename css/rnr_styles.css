@@ -1,0 +1,67 @@
+* { 
+  box-sizing: border-box; 
+}
+
+
+/*Typography*/
+
+body, p, a, h1, h2, h3 { 
+  font-family:'Fira Mono', monospace;
+  color: black;
+}
+a {
+  font-weight: 400;
+  background-color: transparent;
+  margin: 0.25em;
+}
+h1 {
+  font-size: 5em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2em;
+}
+img {
+  max-width: 100%;
+  margin: auto;
+}
+
+/*links*/
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  z-index: 1;
+}
+a:active {
+  text-decoration: none;
+}
+
+/*main*/
+
+.cellrnr {
+  height: 15em;
+  width: 15em;
+}
+#logo {
+  padding: 3em 1em;
+}
+
+.form-check {
+  max-width: 10em;
+}
+/*#free {
+  background-image: url("../img/rnrlogo.jpg");
+  background-size: contain;
+  opacity: 0.9;
+  background: transparent;
+}*/
