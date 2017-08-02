@@ -1,1 +1,1 @@
-# CF template
+# Rock'n'Roll Bingo Game Generator
