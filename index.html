@@ -46,7 +46,7 @@
           </label>
         </div>
       </div>
-    </div>  
+    </div>
 
     <div class="container">
       <div>
@@ -58,11 +58,11 @@
         <textarea class="form-control" rows="5" id="bands"></textarea>
         <button type="button" class="btn btn-secondary btn-lg btn-block" id="bingoGen">Create Bingo Game</button>
         <button type="button" id="print" class="hidden"  onclick="javascript: window.print()">Print</button>
-      </div> 
-    </div>  
+      </div>
+    </div>
 
-    <div class="container table-responsive"> 
-      <h2>Sample Card</h2>        
+    <div class="container table-responsive">
+      <h2>Sample Card</h2>
       <table class="table table-bordered">
         <tbody>
           <tr>
@@ -88,6 +88,27 @@
     <!-- This element's contents will be replaced with your component. -->
     </div>
 
+        <form action="#" id="bingoForm" class="noPrint">
+    <div>
+        <label for="numOfCards">How many cards</label>
+        <input type="text" name="numOfCards" value="25" id="numOfCards" />
+    </div>
+    <br />
+    <label>Enter bands names Dude!!</label>
+    <div id="questions"></div>
+    <button type="button" id="addQuestion" class="addQuestion" >Add Band</button>
+    <div>
+        <button type="button" id="generate" >Generate Bingo Cards</button>
+    <button type="button" id="print" class="hidden"  onclick="javascript: window.print()">Print</button>
+    </div>
+    </form>
+
+    <br /><br />
+    <div id="cards">
+    </div>
+
+    <div class="logger"></div>
+
   </div>
 
   <!-- ============================= -->
@@ -101,11 +122,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- Can place script tags with JavaScript files here -->
-  <script src="js/BingoCard.js"></script>
+  <script src="js/BingoCard2.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
 
-  
+
 
 </body>
 </html>
