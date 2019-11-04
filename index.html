@@ -19,36 +19,42 @@
 
 <body>
 
-  <div class="container-fluid">
+<div class="container-fluid">
+
+  <form action="#" id="bingoForm" class="noPrint">
 
     <div class="container">
-      <h2>Rock'n'Roll Bingo Cards Gen</h2>
-    </div>
+      <h2>Rock'n'Roll Bingo Cards Gen
+      </h2>
 
-    </div>
+      <div>
+          <label for="numOfCards">How many cards</label>
+          <input type="text" name="numOfCards" value="25" id="numOfCards" />
+      </div>
 
-        <form action="#" id="bingoForm" class="noPrint">
-    <div>
-        <label for="numOfCards">How many cards</label>
-        <input type="text" name="numOfCards" value="25" id="numOfCards" />
-    </div>
-    <br />
-    <label>Enter bands names Dude!!</label>
-    <div id="questions"></div>
-    <button type="button" id="addQuestion" class="addQuestion" >Add Band</button>
-    <div>
-        <button type="button" id="generate" >Generate Bingo Cards</button>
-    <button type="button" id="print" class="hidden"  onclick="javascript: window.print()">Print</button>
-    </div>
-    </form>
+      <div id="questions">
+      </div>
 
-    <br /><br />
-    <div id="cards">
+      <div>
+        <label>Enter bands names Dude!!</label>
+        <button type="button" id="addQuestion" class="addQuestion" >Add Band</button>
+      </div>
+
+      <div>
+          <button type="button" id="generate" >Generate Bingo Cards</button>
+          <button type="button" id="print" class="hidden"  onclick="javascript: window.print()">Print</button>
+      </div>
     </div>
+  </form>
 
-    <div class="logger"></div>
 
+  <div id="cards">
   </div>
+
+  <div class="logger">
+  </div>
+
+</div>
 
   <!-- ============================= -->
   <!-- All your JavaScript comes now -->
