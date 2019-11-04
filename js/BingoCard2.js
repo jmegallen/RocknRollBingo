@@ -25,10 +25,10 @@ var questionTemplate = "<div class='qNa'><input type='text' name='a' value='{a}'
  {
      $("#bingoGen").on("click", function()
      {
-         retrieve values from textbox
+         //retrieve values from textbox
          var bdlst = $('#bands').val().split(/\n/);
 
-         create an array
+         //create an array
          var texts = [];
          for (var i=0; i < bdlst.length; i++) {
               only push this line if it contains a non whitespace character.
