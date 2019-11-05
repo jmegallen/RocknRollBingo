@@ -1,35 +1,32 @@
-* {
+html {
   box-sizing: border-box;
-}
-
-
-/*Typography*/
-
-body, p, a, h1, h2, h3 {
+  padding:1.25em;
   font-family:'Fira Mono', monospace;
-  color: black;
+  color: black;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+/*img*/
+
+img {
+  max-width: 100%;
+  margin: auto;
 }
+#rnrback {
+  background-size: cover;
+  height: 31.25em;
+  position: relative;
+  background-image: linear-gradient(rgba(255,255,255,.5),
+                                    rgba(255,255,255,.5)),
+                                    url("rnrback.jpg");
+}
+
+/*links*/
 a {
   font-weight: 400;
   background-color: transparent;
   margin: 0.25em;
 }
-h1 {
-  font-size: 5em;
-}
-h2 {
-  font-size: 3em;
-}
-h3 {
-  font-size: 2em;
-}
-img {
-  max-width: 100%;
-  margin: auto;
-}
-
-/*links*/
-
 a:link {
   text-decoration: none;
 }
@@ -40,7 +37,6 @@ a:hover {
   text-decoration: none;
   background-color: black;
   color: white;
-  z-index: 1;
 }
 a:active {
   text-decoration: none;
@@ -48,73 +44,71 @@ a:active {
 
 /*main*/
 
-.cellrnr {
-  height: 15em;
-  width: 15em;
-}
-#logo {
-  padding: 3em 1em;
-}
-
-.form-check {
-  max-width: 10em;
-}
-html {box-sizing: border-box;padding:20px;font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;}
-*, *:before, *:after {box-sizing: inherit;}
-$cardWidth:750px;
-$cardHeight:420px;
-$cardItemWidth: ( $cardWidth - 50px ) / 3 ;
-$cardItemHeight: ( $cardHeight - 40px ) / 3  ;
-$textFontSize: 28px;
-$colorA:#282C66;
-$colorB:#4b6628;
-$colorC:#664328;
-.card
-{
-  font-weight:bold;
-  font-size:$textFontSize;
-  background-color:$colorA;
+.card {
+  font-weight: bold;
+  font-size: 28px;
+  background-color: #282C66;
   -webkit-print-color-adjust: exact;
-  width:$cardWidth;
-  height:$cardHeight;
-  text-align:center;
-  padding:5px;
-  margin:20px;
-}
-.card:nth-child(2n+1)	{background-color:$colorB; }
-.card:nth-child(3n+1)	{background-color:$colorC; }
-
-.cardItem
-{
-  background-color:white;
-  display:inline-block;
-  width:$cardItemWidth;
-  height:$cardItemHeight;
-  line-height:$cardItemHeight;
-  margin:5px;
+  width: 46em;
+  height: 25em;
+  text-align: center;
+  padding: 0.4em;
+  margin: 1.25em;
 }
 
-button,.numOfCards
-{
-  height:30px;
-  width:auto;
-  padding:0 10px 0 10px;
-  margin:10px 10px 10px 0;
-  background-color:$colorA;
-  border:0;
-  color:white;
-  font-size:16px
+.card:nth-child(2n+1) {
+  background-color: #4b6628;
 }
-.addQuestion
-{
-  margin:0;
-  font-size:15px;
 
+.card:nth-child(3n+1) {
+  background-color: #664328;
 }
-.delete{cursor:pointer;}
-.hidden{display:none;}
-.logger{color:red;padding:10px;font-size:30px;}
+
+.cardItem {
+  background-color: white;
+  display: inline-block;
+  width: 14em;
+  height: 7em;
+  line-height: 7em;
+  margin: 0.5em;
+}
+
+button, .numOfCards {
+  height: 2em;
+  width: auto;
+  padding: 0 1.5em 0 1.5em;
+  margin: 1.5em 1.5em 1.5em 0;
+  background-color: black;
+  border: 0;
+  color: white;
+  font-size: 16px;
+}
+
+.addQuestion {
+  margin: 0;
+  font-size: 15px;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.logger {
+  color: red;
+  padding: 1.5em;
+  font-size: 30px;
+}
+
 @media print {
-  .noPrint{display:none !important;}
-  .card:nth-child(3n+4)	{page-break-before: always; }
+  .noPrint {
+    display: none !important;
+  }
+
+  .card:nth-child(3n+4) {
+    page-break-before: always;
+  }
 }
