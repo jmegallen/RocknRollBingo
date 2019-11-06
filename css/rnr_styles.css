@@ -1,10 +1,48 @@
 html {
   box-sizing: border-box;
-  padding:1.25em;
+
   font-family:'Fira Mono', monospace;
   color: black;}
 
 *, *:before, *:after {box-sizing: inherit;}
+
+body {margin: 0;}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer {
+  background-color: transparent;
+  text-align: left;
+  padding: 0.6em;
+}
+.panel {
+  min-height: 5em;
+  width: 80%;
+  justify-content: center;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  padding: 1em;
+}
+.qNa {
+  width: 20%;
+  margin: 0.75em;
+  justify-content: center;
+}
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
 
 /*img*/
 
@@ -19,6 +57,43 @@ img {
   background-image: linear-gradient(rgba(255,255,255,.5),
                                     rgba(255,255,255,.5)),
                                     url("rnrback.jpg");
+}
+#rnrlogo {
+  background-size: contain;
+  position: relative;
+  background-image: linear-gradient(rgba(255,255,255,.5),
+                                    rgba(255,255,255,.5)),
+                                    url("rnrlogo.jpg");
+}
+/*nav*/
+nav {
+  margin-bottom: 3em;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
 }
 
 /*links*/
@@ -42,14 +117,15 @@ a:active {
   text-decoration: none;
 }
 
+
 /*main*/
 
 .card {
   font-weight: bold;
   font-size: 28px;
-  background-color: #282C66;
+  background-color: #8a8a8a;
   -webkit-print-color-adjust: exact;
-  width: 46em;
+  width: 100%;
   height: 25em;
   text-align: center;
   padding: 0.4em;
@@ -57,11 +133,11 @@ a:active {
 }
 
 .card:nth-child(2n+1) {
-  background-color: #4b6628;
+  background-color: #b5b5b5;
 }
 
 .card:nth-child(3n+1) {
-  background-color: #664328;
+  background-color: #969696;
 }
 
 .cardItem {
