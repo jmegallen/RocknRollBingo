@@ -6,65 +6,6 @@ html {
 
 *, *:before, *:after {box-sizing: inherit;}
 
-body {margin: 0;}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer {
-  background-color: transparent;
-  text-align: left;
-  padding: 0.6em;
-}
-.panel {
-  min-height: 5em;
-  width: 80%;
-  justify-content: center;
-  margin: 0.5em 0.5em 0.5em 0.5em;
-  padding: 1em;
-}
-.qNa {
-  width: 20%;
-  margin: 0.75em;
-  justify-content: center;
-}
-
-.clearfix:after {
-  clear: both;
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-
-/*img*/
-
-img {
-  max-width: 100%;
-  margin: auto;
-}
-#rnrback {
-  background-size: cover;
-  height: 31.25em;
-  position: relative;
-  background-image: linear-gradient(rgba(255,255,255,.5),
-                                    rgba(255,255,255,.5)),
-                                    url("rnrback.jpg");
-}
-#rnrlogo {
-  background-size: contain;
-  position: relative;
-  background-image: linear-gradient(rgba(255,255,255,.5),
-                                    rgba(255,255,255,.5)),
-                                    url("rnrlogo.jpg");
-}
 /*nav*/
 nav {
   margin-bottom: 3em;
@@ -118,14 +59,110 @@ a:active {
 }
 
 
+/*nav*/
+nav {
+  margin-bottom: 3em;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/*links*/
+a {
+  font-weight: 400;
+  background-color: transparent;
+  margin: 0.25em;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+}
+
+/*buttons*/
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {opacity: 1}
+
+/*img*/
+.rnrback {
+  max-width: 100%;
+  margin: auto;
+  background-size: cover;
+  height: 31.25em;
+  position: relative;
+  background-image: linear-gradient(rgba(255,255,255,.5),
+                                    rgba(255,255,255,.5)),
+                                    url("../img/rnrback.jpg");
+}
+
 /*main*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.panel {
+  min-height: 5em;
+  width: 90%;
+  justify-content: left;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  padding: 1em;
+}
 
 .card {
   font-weight: bold;
   font-size: 28px;
   background-color: #8a8a8a;
   -webkit-print-color-adjust: exact;
-  width: 100%;
+  max-width: 100%;
   height: 25em;
   text-align: center;
   padding: 0.4em;
@@ -149,15 +186,15 @@ a:active {
   margin: 0.5em;
 }
 
-button, .numOfCards {
-  height: 2em;
-  width: auto;
-  padding: 0 1.5em 0 1.5em;
-  margin: 1.5em 1.5em 1.5em 0;
-  background-color: black;
-  border: 0;
-  color: white;
-  font-size: 16px;
+.qNa {
+  max-width: 20%;
+  margin: 0.75em;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.qinput {
+  border-radius: 12px;
 }
 
 .addQuestion {
@@ -179,6 +216,14 @@ button, .numOfCards {
   font-size: 30px;
 }
 
+/*footer*/
+.footer {
+  background-color: transparent;
+  text-align: left;
+  padding: 0.6em;
+}
+
+/*mediaQ*/
 @media print {
   .noPrint {
     display: none !important;

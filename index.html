@@ -5,23 +5,24 @@
   <title>Bingo Cards Gen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body id="rnrback">
+<body class="rnrback">
   <header>
     <nav class="flex-container">
       <ul>
-        <li>
-          <a href="https://jmegallen.github.io/cf_template-jmegallen.2.1/" target="_blank" title="Disparate Calculator">First Portfolio Site</a>
+        <li class"navlogo">
+          <a href="https://www.kraefted.com/" target="_blank" title="Kraefted">Kræfted</a>
         </li>
-        <li>
+        <li class"navlink">
           <a href="https://disparatecalc.netlify.com/" target="_blank" title="Disparate Calculator">Disparate Calculator</a>
         </li>
-        <li>
+        <li class"navlink">
           <a href="https://jmebikeshop.herokuapp.com/" target="_blank" title="Bike Shop">Bike Shop</a>
         </li>
-        <li>
+        <li class"navlink">
           <a href="https://urbantomato.netlify.com" target="_blank" title="Urban Tomato">Urban Tomato</a>
         </li>
         <li>
@@ -39,14 +40,13 @@
         <h2>Rock'n'Roll Bingo Cards Gen</h2>
       </div>
       <div class="panel">
-        <label for="numOfCards">How many cards</label>
-        <input type="text" name="numOfCards" value="25" id="numOfCards" />
+        <h2 for="numOfCards">How many cards</h2>
+        <input type="text" name="numOfCards" value="25" class="qinput" id="numOfCards" />
       </div>
 
       <div id="questions" class="flex-container panel"></div>
 
       <div class="panel">
-        <label>Enter bands names Dude!!</label>
         <button type="button" id="addQuestion" class="addQuestion" >Add Band</button>
         <button type="button" id="generate" >Generate Bingo Cards</button>
         <button type="button" id="print" class="hidden"  onclick="javascript: window.print()">Print</button>
@@ -72,8 +72,7 @@
     </div>
   </footer><!-- footer -->
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./script.js"></script>
+  <script  src="js/script.js"></script>
 
 </body>
 </html>

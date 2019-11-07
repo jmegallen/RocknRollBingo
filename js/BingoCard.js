@@ -19,30 +19,7 @@ var questionsPool = [{
 }, {
   "a": "Osibisa"
 }];
-var questionTemplate = "<div class='qNa'><input type='text' name='a' value='{a}' /> <i class='delete' title='delete'>X</i></div>";
-
- $(function()
- {
-     $("#bingoGen").on("click", function()
-     {
-         //retrieve values from textbox
-         var bdlst = $('#bands').val().split(/\n/);
-
-         //create an array
-         var texts = [];
-         for (var i=0; i < bdlst.length; i++) {
-              //only push this line if it contains a non whitespace character.
-             if (/\S/.test(bdlst[i])) {
-                 texts.push($.trim(bdlst[i]).split(","));
-             }
-             if (/^[,]+$/.test(bdlst[i][i])) {
-                 texts.push($.trim(bdlst[i][i]));
-             }
-         }
-
-         console.log(texts);
-     });
- });
+var questionTemplate = "<div class='qNa'><input type='text' name='a' class='qinput' value='{a}' /> <i class='delete fas fa-times' title='delete'></i></div>";
 
 function getCard() {
   var card = {};
