@@ -184,9 +184,12 @@ button:hover {opacity: 1}
   height: 30%;
   line-height: 7em;
   margin: 1% 1.5%;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:contain;
 }
 
-.qNa {
+.artists {
   max-width: 20%;
   margin: 0.75em;
   justify-content: center;
@@ -197,7 +200,7 @@ button:hover {opacity: 1}
   border-radius: 12px;
 }
 
-.addQuestion {
+.addBand {
   margin: 0;
   font-size: 15px;
 }

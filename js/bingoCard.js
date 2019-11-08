@@ -1,4 +1,4 @@
-var questionsPool = [{
+var bandsPool = [{
   "a": "Kinks"
 }, {
   "a": "The Clash"
@@ -19,7 +19,7 @@ var questionsPool = [{
 }, {
   "a": "Osibisa"
 }];
-var questionTemplate = "<div class='qNa'><input type='text' name='a' class='qinput' value='{a}' /> <i class='delete fas fa-times' title='delete'></i></div>";
+var bandTemplate = "<div class='artists'><input type='text' name='a' class='qinput' value='{a}' /> <i class='delete fas fa-times' title='delete'></i></div>";
 
 function getCard() {
   var card = {};
@@ -29,7 +29,7 @@ function getCard() {
     while (card[num] !== undefined) {
       num = getRandomPos();
     }
-    card[num] = questionsPool[num];
+    card[num] = bandsPool[num];
     card.positions.push(num);
   }
   card.positions = card.positions.sort().join();
@@ -37,7 +37,7 @@ function getCard() {
 }
 
 function getRandomPos() {
-  return Math.round(Math.random() * 100 % (questionsPool.length - 1));
+  return Math.round(Math.random() * 100 % (bandsPool.length - 1));
 }
 
 function getCards(numOfCards) {
@@ -78,7 +78,7 @@ function renderCard(card) {
     if (key !== "positions" && card.hasOwnProperty(key)) {
       if(card[key].a.indexOf("http") === 0)
       {
-         html += "<span class='cardItem' style='background-repeat:no-repeat;background-position: center center;background-size:contain;background-image:url(" + card[key].a + ");'>&nbsp;</span>";
+         html += "<span class='cardItem' style='background-image:url(" + card[key].a + ");'>&nbsp;</span>";
       }
       else {
          html += "<span class='cardItem'>" + card[key].a + "</span>";
@@ -89,21 +89,21 @@ function renderCard(card) {
   return html;
 }
 
-function initQuestionsPool() {
-  var questionsHtml = ""; // $("#questions");
-  var savedQuestions = localStorage.getItem("questionsPool");
-  if (savedQuestions) {
-    questionsPool = JSON.parse(savedQuestions);
+function initbandsPool() {
+  var bandsHtml = ""; // $("#bands");
+  var savedBands = localStorage.getItem("bandsPool");
+  if (savedBands) {
+    bandsPool = JSON.parse(savedBands);
   }
-  for (var i = 0, len = questionsPool.length; i < len; i++) {
-    questionsHtml += questionTemplate.replace("{a}",questionsPool[i].a);
+  for (var i = 0, len = bandsPool.length; i < len; i++) {
+    bandsHtml += bandTemplate.replace("{a}",bandsPool[i].a);
   }
-  $("#questions").empty().html(questionsHtml);
+  $("#bands").empty().html(bandsHtml);
 }
 
-function setQuestionsPoolByForm() {
-  var qNa = $(".qNa");
-  questionsPool = $.map(qNa, function(elem, i) {
+function setbandsPoolByForm() {
+  var artists = $(".artists");
+  bandsPool = $.map(artists, function(elem, i) {
     var a = $(elem).find("[name='a']").val();
     if (!a) {
       return null; //remove from list
@@ -112,29 +112,29 @@ function setQuestionsPoolByForm() {
       a: a,
     }
   });
-  localStorage.setItem("questionsPool", JSON.stringify(questionsPool));
-  initQuestionsPool();//will remove empty rows of questions and fill missing a
+  localStorage.setItem("bandsPool", JSON.stringify(bandsPool));
+  initbandsPool();//will remove empty rows of bands and fill missing a
 }
 function generateBingoCards()
 {
   var numOfRequestedCards = $("#numOfCards").val();
   $("#cards").empty();
-  setQuestionsPoolByForm();
-  if (nOverK(questionsPool.length, 9) < numOfRequestedCards) {
-    $(".logger").text("you need more questions for generating " + numOfRequestedCards + "cards")
+  setbandsPoolByForm();
+  if (nOverK(bandsPool.length, 9) < numOfRequestedCards) {
+    $(".logger").text("you need more bands for generating " + numOfRequestedCards + " cards")
   } else {
     var cards = getCards(numOfRequestedCards);
     $("#cards").html(renderCards(cards));
     $("#print").removeClass("hidden");
   }
 }
-initQuestionsPool();
+initbandsPool();
 generateBingoCards();
 ///events
 $("#generate").on("click", generateBingoCards);
-$("#questions").on("click", ".delete", function(e) {
-  $(this).closest(".qNa").remove();
+$("#bands").on("click", ".delete", function(e) {
+  $(this).closest(".artists").remove();
 });
-$("#addQuestion").on("click", function(e) {
-  $("#questions").append(questionTemplate.replace("{a}"));
+$("#addBand").on("click", function(e) {
+  $("#bands").append(bandTemplate.replace("{a}"));
 });
