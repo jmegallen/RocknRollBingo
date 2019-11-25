@@ -230,7 +230,14 @@ button:hover {opacity: 1}
   width: 100%;
 }
 .logo {
-    
+    border-radius: 12px;
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(255,255,255,.5),
+                                        rgba(255,255,255,.5)),
+                                        url("../img/klogo.png");
 }
 
 /*mediaQ*/
