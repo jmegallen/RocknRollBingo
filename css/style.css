@@ -224,16 +224,16 @@ button:hover {opacity: 1}
   background-color: transparent;
   padding: 0.6em;
   position: fixed;
-  height: 2em;
+  height: 5em;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-footerleft {
+.footerleft {
     float:left;
     text-align: left;
 }
-footerright {
+.footerright {
     float: right;
     text-align: right;
 }
