@@ -236,11 +236,14 @@ button:hover {opacity: 1}
 .footerright {
     float: right;
     text-align: right;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 }
 .logo {
-    border-radius: 12px;
+    border-radius: 100%;
     max-width: 100%;
-    height: 2em;
+    height: 1em;
     margin: auto;
     background-size: cover;
     position: relative;
