@@ -229,10 +229,12 @@ button:hover {opacity: 1}
   width: 100%;
 }
 footerleft {
-    float:left
+    float:left;
+    text-align: left;
 }
 footerright {
     float: right;
+    text-align: right;
 }
 .logo {
     border-radius: 12px;
