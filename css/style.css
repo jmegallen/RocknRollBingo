@@ -229,6 +229,9 @@ button:hover {opacity: 1}
   bottom: 0;
   width: 100%;
 }
+.logo {
+    
+}
 
 /*mediaQ*/
 @media print {
