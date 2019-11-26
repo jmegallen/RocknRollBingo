@@ -222,35 +222,24 @@ button:hover {opacity: 1}
 
 /*footer*/
 .footer {
-  background-color: transparent;
+  background-color: black;
+  color: white;
   padding: 0.6em;
   position: fixed;
-  height: 5em;
+  height: 4em;
   left: 0;
   bottom: 0;
   width: 100%;
+  vertical-align: middle;
 }
-.footerleft {
-    float:left;
-    text-align: left;
+.footercentre {
+  text-align: center;
 }
 .footerright {
-    float: right;
     text-align: right;
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
     filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-}
-.logo {
-    border-radius: 100%;
-    max-width: 100%;
-    height: 1em;
-    margin: auto;
-    background-size: cover;
-    position: relative;
-    background-image: linear-gradient(rgba(255,255,255,.5),
-                                        rgba(255,255,255,.5)),
-                                        url("../img/klogo.png");
 }
 
 /*mediaQ*/
