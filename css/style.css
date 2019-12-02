@@ -221,25 +221,27 @@ button:hover {opacity: 1}
 }
 
 /*footer*/
-.footer {
+footer {
   background-color: black;
   color: white;
-  padding: 0.6em;
-  position: fixed;
-  height: 4em;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  vertical-align: middle;
+  padding: 1em;
 }
-.footercentre {
-  text-align: center;
+.logo {
+  height:3em;
+  width:3em;
+  margin-left: 2em;
+  border-radius:75%;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footerright {
-    text-align: right;
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /*mediaQ*/
