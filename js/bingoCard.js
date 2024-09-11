@@ -28,7 +28,6 @@ function getCard() {
   for (var i = 0; i < 9; i++) {
     var randomIndex = Math.floor(Math.random() * availableBands.length);
     card[i] = availableBands[randomIndex]; // Pick a random band
-    availableBands.splice(randomIndex, 1); // Remove the picked band to avoid duplicates
     card.positions.push(i);
   }
   card.positions = card.positions.sort().join();
