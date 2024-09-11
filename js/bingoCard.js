@@ -24,13 +24,11 @@ var bandTemplate = "<div class='artists'><input type='text' name='a' class='qinp
 function getCard() {
   var card = {};
   card.positions = [];
+  var availableBands = [...bandsPool]; // Create a copy of the pool
   for (var i = 0; i < 9; i++) {
-    var num = getRandomPos();
-    while (card[num] !== undefined) {
-      num = getRandomPos();
-    }
-    card[num] = bandsPool[num];
-    card.positions.push(num);
+    var randomIndex = Math.floor(Math.random() * availableBands.length);
+    card[i] = availableBands[randomIndex]; // Pick a random band
+    card.positions.push(i);
   }
   card.positions = card.positions.sort().join();
   return card;
